@@ -89,11 +89,31 @@ function zkouska() {
 	return galerie;
 }
 
+function VypisGalerii(galerie) {
+	let output = "<h3></h3><table><tr><th>Autor</th> <th>Název</th> <th>Cena</th> <th>Rok</th></tr>";
+	for(var i = 0; i < galerie.length;i++){
+		output = output + `<tr><td>${galerie.galerie[i].autor}</td> <td>${galerie.galerie[i].nazev}</td> <td>${galerie.galerie[i].cena}</td> <td>${galerie.galerie[i].rok}</td></tr>`;
+	}
+	output = output + "</table>"
+	document.getElementById("galerie").innerHTML = output;
+}
+
 let galerie = zkouska();
 console.log(galerie);
 console.log(galerie.overallPrice());
 console.log(galerie.threeMostExpensive());
 let autor = new Autor("Solim","Raset", 2005);
 console.log(galerie.paintingsBy(autor));
+VypisGalerii(galerie);
+//saveJSON(galerie, galerie.nazev);
+//console.log(readJSON(galerie.nazev));
 
+let autori = [];
+autori.push(new Autor("Test","1",'1.1.2000'));
+autori.push(new Autor("Test","2",'1.10.2002'));
+let output = "";
+for(var i = 0; i < autori.length;i++){
+	output = output+`<option value="${autori[i]}">${autori[i].jmeno} ${autori[i].prijmeni}</option>`
+}
+document.getElementById("options").innerHTML = output;
 
