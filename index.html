@@ -10,6 +10,38 @@
 
 </head>
 <body>
+
+  <fieldset>
+    
+    <form id="autor">
+      <label for="fname">Jméno:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="Autorovo jméno"><br>
+      <label for="lname">Přijmení:</label><br>
+      <input type="text" id="lname" name="lname" placeholder="Autorovo přijmení"><br>
+      <label for="birthday">Datum narození:</label><br>
+      <input type="date" id="birthday" name="birthday"><br><br>
+      <input type="button" value="Vytvoř nového autora" onclick="NewAutor()"><br><br>
+    </form>
+    <form id="obraz">
+      <label for="title">Název:</label><br>
+      <input type="text" id="title" name="title" placeholder="Název obrazu"><br>
+      <label for="cost">Cena:</label><br>
+      <input type="number" id="cost" name="cost" placeholder="Cena obrazu"><br>
+      <label for="creation">Vznik obrazu:</label><br>
+      <input type="month" id="creation" name="creation"><br>
+      <label for="autor">Autor:</label><br>
+      <select id="options" name="options">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select><br><br>
+      <input type="button" value="Vytvoř nový obraz" onclick="NewPainting()"><br><br>
+    </form>
+    <form>
+      
+    </form>
+
+  </fieldset>
   <p id="autor">Miloš Tesař C3b</p>
 
 </body>

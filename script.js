@@ -25,7 +25,8 @@ class Autor {
 }
 
 class Galerie {
-	constructor() {
+	constructor(nazev) {
+		this.nazev = nazev;
 		this.galerie = [];
 	}
 	add(obraz) {
@@ -76,7 +77,7 @@ class Galerie {
 function zkouska() {
 	let autor = new Autor("Milos","Tesar",2003);
 	let obraz = new Obraz(autor,"Zkouska 1",2000,2020);
-	let galerie = new Galerie();
+	let galerie = new Galerie("Zkouska");
 	galerie.add(obraz);
 	autor = new Autor("Solim","Raset", 2005);
 	obraz = new Obraz(autor,"Zkouska 2",2650,2021);
